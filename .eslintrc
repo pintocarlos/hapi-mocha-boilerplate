@@ -1,0 +1,49 @@
+{
+  "plugins":[
+    "es-beautifier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:es-beautifier/standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "chai": true,
+    "expect": true
+  },
+  "rules": {
+    "quotes": 0,
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-debugger": 0,
+    "semi": [1, "always"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "eol-last": 1,
+    "no-underscore-dangle": 0,
+    "no-alert": 0,
+    "no-lone-blocks": 0,
+    "no-unused-vars": [1, {
+      "vars": "all",
+      "args": "after-used"
+    }],
+    "import/no-extraneous-dependencies": 0,
+    "global-require": 0,
+    "max-len": ["error", 121],
+    "arrow-parens": 0,
+    "template-curly-spacing": 0,
+    "no-confusing-arrow": 0,
+    "import/prefer-default-export": 0,
+    "class-methods-use-this": 0,
+    "es-beautifier/multiline-object-properties": 0
+  }
+}

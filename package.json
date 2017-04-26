@@ -1,0 +1,46 @@
+{
+  "name": "hapi-mocha-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate server setup using hapi and testing with mocha, amongs other nice things.",
+  "main": "server.js",
+  "engine": {
+    "node": "6.10.2",
+    "npm": "4.5.0"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development nodemon server.js",
+    "lint": "eslint . --ext .js",
+    "test": "NODE_ENV=test NODE_PATH=./api mocha -r test/setup.js --recursive 'test/*.spec.js' --reporter spec",
+    "tdd": "NODE_ENV=test NODE_PATH=./api mocha -r test/setup.js --recursive 'test/*.spec.js' -w",
+    "test-reporter": "NODE_ENV=test NODE_PATH=./api mocha -r test/setup.js --recursive 'test/*.spec.js' --reporter mocha-junit-reporter"
+  },
+  "keywords": [
+    "feed"
+  ],
+  "author": "Carlos Pinto",
+  "license": "MIT",
+  "dependencies": {
+    "glue": "^4.1.0",
+    "good": "^7.1.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.2",
+    "hapi": "^16.1.1"
+  },
+  "devDependencies": {
+    "blipp": "^2.3.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "es-beautifier": "^0.6.1",
+    "eslint": "^3.17.1",
+    "eslint-plugin-es-beautifier": "^1.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^2.5.3",
+    "mocha-junit-reporter": "^1.13.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  }
+}
